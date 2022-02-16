@@ -1,9 +1,10 @@
 
 # Spinny Backend Assignment
 
-A brief description of what this project does and who it's for
 
+## Documentation
 
+- [Postman Collection](https://documenter.getpostman.com/view/11525932/UVkiRJ5z)
 ## API Reference
 
 #### List all boxes
@@ -27,7 +28,7 @@ A brief description of what this project does and who it's for
 | `length`      | `int` | **Required**. Length of the box |
 | `breadth`      | `int` | **Required**. Breadth of the box |
 | `height`      | `int` | **Required**. Height of the box |
-| `Token Authenthication`      | `string` | **Header**. Authentication to create |
+| `Token`      | `string` | **Header**. Authentiation to POST |
 
 
 #### List user's boxes
@@ -36,33 +37,44 @@ A brief description of what this project does and who it's for
   GET /api/users_box
 ```
 
-| Authorization | Type     | Description                       |
+| Header | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Token Authenthication`      | `string` | **Required**. Id of item to fetch |
+| `Token`      | `string` |Authentication |
 
 
-#### Get User's boxes
+#### Update specific box
 
 ```http
-  GET /api/users_box
+  PUT /api/<int:pk>
 ```
 
-| Authorization | Type     | Description                       |
+| Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Token Authenthication`      | `string` | **Required**. Id of item to fetch |
+| `Changes`      | `string/int` |Updated data|
+| `Token`      | `string` |Authentication|
 
 
-#### Get User's boxes
+#### Delete specific box
 
 ```http
-  GET /api/<int:pk>
+  DELETE /api/<int:pk>
 ```
 
-| Authorization | Type     | Description                       |
+| Header | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Token Authenthication`      | `string` | **Require**. Id of item to fetch |
+| `Box's User Token`      | `string` |Authentication|
 
 
+#### List filtered boxes 
+```http
+  GET /api/list?length__gt=6&created_by=3&area__gt=3000
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `length__gt or length__lt`      | `int` |Length of the box |
+| `breadth__gt or breadth__lt`      | `int` |Breadth of the box |
+| `height__gt or height__gt`      | `int` |Height of the box |
 ## Run Locally
 
 Clone the project
@@ -106,7 +118,8 @@ To run this project, you will need to add the following `SECRET_KEY` variable to
  - [Design with developer empathy](https://apiguide.readthedocs.io/en/latest/principles/empathy.html#:~:text=Design%20with%20developer%20empathy&text=Perhaps%20the%20most%20important%20criteria,will%20remain%20undiscovered%20or%20unrealised)
  - [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 
-## Documentation
+## Tech Stack
 
-- [Postman Collection](https://documenter.getpostman.com/view/11525932/UVkiRJ5z)
-- d
+**Server:** Django, Django Rest Framework
+
+c
