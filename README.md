@@ -9,7 +9,7 @@
 
 #### List all boxes
 
-```http
+```bash
   GET /api/list
 ```
 
@@ -19,7 +19,7 @@
 
 #### CREATE box
 
-```http
+```bash
   POST /api/create
 ```
 
@@ -33,7 +33,7 @@
 
 #### List user's boxes
 
-```http
+```bash
   GET /api/users_box
 ```
 
@@ -44,7 +44,7 @@
 
 #### Update specific box
 
-```http
+```bash
   PUT /api/<int:pk>
 ```
 
@@ -56,7 +56,7 @@
 
 #### Delete specific box
 
-```http
+```bash
   DELETE /api/<int:pk>
 ```
 
@@ -66,7 +66,7 @@
 
 
 #### List filtered boxes 
-```http
+```bash
   GET /api/list?length__gt=6&created_by=3&area__gt=3000
 ```
 
@@ -122,4 +122,3 @@ To run this project, you will need to add the following `SECRET_KEY` variable to
 
 **Server:** Django, Django Rest Framework
 
-c
