@@ -27,10 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-A1 = 1000000
-V1 = 1000000
-L1 = 100000
-L2 = 50000
+A1 = 100
+V1 = 1000
+L1 = 100
+L2 = 50
 # Application definition
 
 INSTALLED_APPS = [
