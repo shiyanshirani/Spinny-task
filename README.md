@@ -7,33 +7,43 @@
 - [Postman Collection](https://documenter.getpostman.com/view/11525932/UVkiRJ5z)
 ## API Reference
 
-#### List all boxes
-
-```bash
+#### Obtain Authentication Token
+```http
   GET /api/list
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Open to Any |
+| `username` | `string` | Existing username|
+| `password` | `string` | password|
+
+#### List all boxes
+
+```http
+  GET /api/list
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | Open to Any |
 
 #### CREATE box
 
-```bash
+```http
   POST /api/create
 ```
 
 | Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `length`      | `int` | **Required**. Length of the box |
-| `breadth`      | `int` | **Required**. Breadth of the box |
-| `height`      | `int` | **Required**. Height of the box |
-| `Token`      | `string` | **Header**. Authentiation to POST |
+| :-------- | :------- | :------------------------------- |
+| `length`      | `int` |Length of the box |
+| `breadth`      | `int` | Breadth of the box |
+| `height`      | `int` |  Height of the box |
+| `Token`      | `string` |  Authentication to POST |
 
 
 #### List user's boxes
 
-```bash
+```http
   GET /api/users_box
 ```
 
@@ -44,7 +54,7 @@
 
 #### Update specific box
 
-```bash
+```http
   PUT /api/<int:pk>
 ```
 
@@ -56,7 +66,7 @@
 
 #### Delete specific box
 
-```bash
+```http
   DELETE /api/<int:pk>
 ```
 
@@ -66,7 +76,7 @@
 
 
 #### List filtered boxes 
-```bash
+```http
   GET /api/list?length__gt=6&created_by=3&area__gt=3000
 ```
 
@@ -102,6 +112,10 @@ Make migrations
   python3 manage.py migrate
 ```
 
+```bash
+  python3 manage.py createsuperuser (testing purposes)
+```
+
 Run server
 ```bash
   python3 manage.py runserver
@@ -121,4 +135,3 @@ To run this project, you will need to add the following `SECRET_KEY` variable to
 ## Tech Stack
 
 **Server:** Django, Django Rest Framework
-
