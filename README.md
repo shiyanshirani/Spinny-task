@@ -131,6 +131,10 @@ To run this project, you will need to add the following `SECRET_KEY` variable to
 - [Design with developer empathy](https://apiguide.readthedocs.io/en/latest/principles/empathy.html#:~:text=Design%20with%20developer%20empathy&text=Perhaps%20the%20most%20important%20criteria,will%20remain%20undiscovered%20or%20unrealised)
 - [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 
+## License
+
+- [MIT](./LICENSE)
+
 ## Tech Stack
 
 **Server:** Django, Django Rest Framework
