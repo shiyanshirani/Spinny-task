@@ -1,5 +1,4 @@
 # Project imports
-from re import search
 from boxes.models import Box
 from boxes.checks import validation
 from boxes.filters import BoxFilter

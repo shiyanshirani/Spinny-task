@@ -1,5 +1,10 @@
+# Django imports
 from django.contrib.auth.models import User
+
+# Project imports
 from boxes.models import Box
+
+# Package imports
 import django_filters
 
 

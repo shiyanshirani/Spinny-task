@@ -1,8 +1,13 @@
+# Django imports
 from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
 class Box(models.Model):
+    """
+    Model Schema: BOX
+    """
+
     length = models.FloatField(blank=True)
     breadth = models.FloatField(blank=True)
     height = models.FloatField(blank=True)
@@ -20,6 +25,11 @@ class Box(models.Model):
         return f"{self.pk} {self.created_by} - {self.length, self.breadth, self.height}"
 
     def get_area(self):
+        """Assigns area in box's attribute
+
+        Returns:
+            int: Area of cuboid.
+        """
         return 2 * (
             self.length * self.breadth
             + self.length * self.height
@@ -27,9 +37,18 @@ class Box(models.Model):
         )
 
     def get_volume(self):
+        """Assigns volume in box's attribute
+
+        Returns:
+            int: Volume of cuboid.
+        """
         return self.length * self.breadth * self.height
 
     def save(self, *args, **kwargs):
+        """
+        Overwrites default save() function.
+        """
+
         if (self.length, self.breadth, self.height):
             self.area = self.get_area()
             self.volume = self.get_volume()

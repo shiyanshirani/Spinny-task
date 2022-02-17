@@ -1,9 +1,12 @@
+# Django imports
 from django.db.models import Avg
 from django.utils import timezone
 
+# Project imports
 from boxes.models import Box
 from Spinny.settings import A1, V1, L1, L2
 
+# Packages import
 from datetime import timedelta, datetime
 
 

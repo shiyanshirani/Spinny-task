@@ -1,5 +1,7 @@
+# Django imports
 from django.urls import path
 
+# Project imports
 from boxes.views import BoxDetailAPI, BoxListAPI, BoxAddAPI, BoxDetailAPI
 
 urlpatterns = [

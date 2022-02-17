@@ -1,4 +1,7 @@
+# DRF imports
 from rest_framework import serializers
+
+# Project imports
 from boxes.models import Box
 
 
